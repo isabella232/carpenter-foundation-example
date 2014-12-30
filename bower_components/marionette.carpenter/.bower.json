@@ -37,6 +37,6 @@
   },
   "_source": "git://github.com/rapid7/marionette.carpenter.git",
   "_target": "*",
-  "_originalSource": "carpenter",
+  "_originalSource": "marionette.carpenter",
   "_direct": true
 }
