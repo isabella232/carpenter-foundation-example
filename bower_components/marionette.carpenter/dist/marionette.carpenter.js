@@ -479,7 +479,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=mixin.js.map
+//# =mixin.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -563,7 +563,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=application_controller.js.map
+//# =application_controller.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -692,7 +692,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=paginated_collection.js.map
+//# =paginated_collection.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -729,7 +729,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=action_button.js.map
+//# =action_button.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -753,7 +753,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=action_buttons_collection.js.map
+//# =action_buttons_collection.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -775,7 +775,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=filter.js.map
+//# =filter.js.map
 ;
 (function() {
   define('concerns/views/filter_toggle',[], function() {
@@ -796,7 +796,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=filter_toggle.js.map
+//# =filter_toggle.js.map
 ;
 (function() {
   define('concerns/views/filter_custom_query_field',[], function() {
@@ -820,7 +820,7 @@ define("almond", function(){});
 
 }).call(this);
 
-//# sourceMappingURL=filter_custom_query_field.js.map
+//# =filter_custom_query_field.js.map
 ;
 define('templates/action_button',[],function(){
   var template = function(__obj) {
@@ -845,31 +845,31 @@ define('templates/action_button',[],function(){
     };
     (function() {
       _print(_safe('<a href=\'javascript:void(0)\' '));
-    
+
       if (this.id) {
         _print(_safe('id="'));
         _print(this.id);
         _print(_safe('"'));
       }
-    
+
       _print(_safe(' class="action-button '));
-    
+
       _print(this["class"]);
-    
+
       _print(_safe(' '));
-    
+
       if (this.disabled) {
         _print(_safe('disabled'));
       }
-    
+
       _print(_safe('">\n  '));
-    
+
       _print(this.label);
-    
+
       _print(_safe('\n</a>'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -996,7 +996,7 @@ define('templates/action_button',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=action_button.js.map
+//# =action_button.js.map
 ;
 define('templates/control_bar',[],function(){
   var template = function(__obj) {
@@ -1023,11 +1023,11 @@ define('templates/control_bar',[],function(){
       if (this.renderFilterControls) {
         _print(_safe('\n  <div class="filter-controls-wrapper">\n    <div class="filter-controls">\n      <a href="javascript:void(0);" class="filter-toggle">\n        Filter\n        <span class="explanatory-text">Toggle search filter</span>\n      </a>\n\n      <div class=\'search-field\'>\n        <input type="text" class="filter-custom-query-field" placeholder="Search">\n      </div>\n    </div>\n  </div>\n'));
       }
-    
+
       _print(_safe('\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1111,7 +1111,7 @@ define('templates/control_bar',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=control_bar.js.map
+//# =control_bar.js.map
 ;
 define('templates/empty',[],function(){
   var template = function(__obj) {
@@ -1136,9 +1136,9 @@ define('templates/empty',[],function(){
     };
     (function() {
       _print(_safe('<td colspan=\'100%\'>No items were found.</td>'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1186,7 +1186,7 @@ define('templates/empty',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=empty.js.map
+//# =empty.js.map
 ;
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
@@ -1331,7 +1331,7 @@ define('templates/empty',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=filter.js.map
+//# =filter.js.map
 ;
 define('templates/header',[],function(){
   var template = function(__obj) {
@@ -1360,17 +1360,17 @@ define('templates/header',[],function(){
         _print(this.title);
         _print(_safe('</h3>\n'));
       }
-    
+
       _print(_safe('\n\n<div class=\'right\'>\n  '));
-    
+
       if (this.searchable) {
         _print(_safe('\n    <input type=\'text\' name=\'query\' />\n  '));
       }
-    
+
       _print(_safe('\n</div>\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1428,7 +1428,7 @@ define('templates/header',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=header.js.map
+//# =header.js.map
 ;
 define('templates/layout',[],function(){
   var template = function(__obj) {
@@ -1453,19 +1453,19 @@ define('templates/layout',[],function(){
     };
     (function() {
       _print(_safe('\n<div class=\'header-region\'>\n</div>\n\n'));
-    
+
       _print(_safe('\n<div class=\'selection-indicator-region\'>\n</div>\n\n'));
-    
+
       _print(_safe('\n<div class=\'buttons-region\'>\n</div>\n\n<div class=\'filter-region\'>\n</div>\n\n<div class=\'table-container\'>\n  '));
-    
+
       _print(_safe('\n  <div class=\'table-region\'>\n  </div>\n\n  '));
-    
+
       _print(_safe('\n  <div class=\'overlay-region\'>\n  </div>\n</div>\n\n'));
-    
+
       _print(_safe('\n<div class=\'pagination-region\'>\n</div>\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1591,7 +1591,7 @@ define('templates/layout',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=layout.js.map
+//# =layout.js.map
 ;
 define('templates/loading',[],function(){
   var template = function(__obj) {
@@ -1616,9 +1616,9 @@ define('templates/loading',[],function(){
     };
     (function() {
       _print(_safe('<td colspan="100%" class=\'tab-loading\'>\n</td>'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1662,7 +1662,7 @@ define('templates/loading',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=loading.js.map
+//# =loading.js.map
 ;
 define('templates/paginator',[],function(){
   var template = function(__obj) {
@@ -1687,7 +1687,7 @@ define('templates/paginator',[],function(){
     };
     (function() {
       var i, val, _i, _len, _ref;
-    
+
       if (this.collection.length > 0) {
         _print(_safe('\n  <div class=\'left\'>\n    <label class=\'row_select\'>\n      <span class=\'line\'>Show</span>\n      <select class=\'rows\'>\n        '));
         _ref = this.perPageOptions;
@@ -1729,11 +1729,11 @@ define('templates/paginator',[],function(){
         }
         _print(_safe('\'></a>\n  </div>\n'));
       }
-    
+
       _print(_safe('\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -1758,7 +1758,7 @@ define('templates/paginator',[],function(){
 * Copyright (c) 2014 Addy Osmani; Licensed MIT */
 /*globals Backbone:true, _:true, jQuery:true*/
 Backbone.Paginator = (function ( Backbone, _, $ ) {
-  
+
 
 
   var bbVer = _.map(Backbone.VERSION.split('.'), function(digit) {
@@ -2914,7 +2914,7 @@ define("views/../../bower_components/backbone.paginator/dist/backbone.paginator.
 
 }).call(this);
 
-//# sourceMappingURL=paginator.js.map
+//# =paginator.js.map
 ;
 define('templates/row',[],function(){
   var template = function(__obj) {
@@ -2939,7 +2939,7 @@ define('templates/row',[],function(){
     };
     (function() {
       var column, idx, _i, _len, _ref;
-    
+
       if (this.selectable) {
         _print(_safe('\n  <td class="checkbox">\n    <input type="checkbox" data-id="'));
         _print(this.model.id);
@@ -2949,13 +2949,13 @@ define('templates/row',[],function(){
         }
         _print(_safe('>\n  </td>\n'));
       }
-    
+
       _print(_safe('\n\n'));
-    
+
       idx = 0;
-    
+
       _print(_safe('\n'));
-    
+
       _ref = this.columns;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         column = _ref[_i];
@@ -2989,11 +2989,11 @@ define('templates/row',[],function(){
         idx++;
         _print(_safe('\n'));
       }
-    
+
       _print(_safe('\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -3167,7 +3167,7 @@ define('templates/row',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=row.js.map
+//# =row.js.map
 ;
 define('templates/table',[],function(){
   var template = function(__obj) {
@@ -3192,23 +3192,23 @@ define('templates/table',[],function(){
     };
     (function() {
       var column, sorted, _i, _len, _ref;
-    
+
       _print(_safe('<table '));
-    
+
       if (this.htmlID) {
         _print(_safe('id="'));
         _print(this.htmlID);
         _print(_safe('"'));
       }
-    
+
       _print(_safe('>\n  <thead>\n    <tr>\n      '));
-    
+
       if (this.selectable) {
         _print(_safe('\n        <th class="select-all unselectable" unselectable="on">\n          <input type="checkbox" title="Selects all available records on every page">\n        </th>\n      '));
       }
-    
+
       _print(_safe('\n\n      '));
-    
+
       _ref = this.columns;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         column = _ref[_i];
@@ -3226,11 +3226,11 @@ define('templates/table',[],function(){
         _print(column.label);
         _print(_safe('</span>\n        </th>\n      '));
       }
-    
+
       _print(_safe('\n    </tr>\n  </thead>\n\n  <tbody>\n\n  </tbody>\n</table>\n'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -3693,7 +3693,7 @@ define("views/../../bower_components/jquery-resizable-columns/dist/jquery.resiza
 
 }).call(this);
 
-//# sourceMappingURL=row_list.js.map
+//# =row_list.js.map
 ;
 define('templates/selection_indicator',[],function(){
   var template = function(__obj) {
@@ -3718,17 +3718,17 @@ define('templates/selection_indicator',[],function(){
     };
     (function() {
       _print(_safe('<div class="selection-indicator"><span class="num-selected">'));
-    
+
       _print(this.numSelected);
-    
+
       _print(_safe('</span> of '));
-    
+
       _print(this.totalRecords);
-    
+
       _print(_safe(' selected</div>'));
-    
+
     }).call(this);
-    
+
     return __out.join('');
   }).call((function() {
     var obj = {
@@ -3815,7 +3815,7 @@ define('templates/selection_indicator',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=selection_indicator.js.map
+//# =selection_indicator.js.map
 ;
 (function() {
   var __hasProp = {}.hasOwnProperty,
@@ -4144,7 +4144,7 @@ define('templates/selection_indicator',[],function(){
 
 }).call(this);
 
-//# sourceMappingURL=table_controller.js.map
+//# =table_controller.js.map
 ;
 
 require(["controllers/table_controller"]);
