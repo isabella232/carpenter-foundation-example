@@ -42,7 +42,7 @@
           "backbone.wreqr": "bower_components/backbone.wreqr/lib/backbone.wreqr",
           "cocktail": "bower_components/cocktail/Cocktail",
           "marionette": "bower_components/backbone.marionette/lib/backbone.marionette",
-          "carpenter": "bower_components/marionette.carpenter/dist/marionette.carpenter.require"
+          "carpenter": "bower_components/marionette.carpenter/dist/marionette.carpenter"
         },
         shim: {
           'backbone': {
@@ -51,10 +51,6 @@
           },
           'backbone.radio': {
             deps: ['backbone']
-          },
-          'cocktail': {
-            deps: ['underscore'],
-            exports: 'Cocktail'
           },
           'underscore': {
             exports: '_'
