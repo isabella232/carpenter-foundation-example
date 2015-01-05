@@ -1,35 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carpenter Foundation Example</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
-  </head>
-  <body>
-    <div class="contain-to-grid">
-      <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#">Carpenter Foundation Example</a></h1>
-          </li>
-        </ul>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </nav>
-    </div>
 
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
-      </div>
-
-      <div id="woodworkers-table-region"></div>
-    </div>
-
-    <script src="bower_components/requirejs/require.js"></script>
-    <script>
-      requirejs.config({
+      config = requirejs.config({
+        baseUrl: './',
         paths: {
           "jquery": "bower_components/jquery/dist/jquery",
           "jquery-resizable-columns": "bower_components/jquery-resizable-columns/dist/jquery.resizableColumns.min",
@@ -42,7 +13,7 @@
           "backbone.wreqr": "bower_components/backbone.wreqr/lib/backbone.wreqr",
           "cocktail": "bower_components/cocktail/Cocktail",
           "marionette": "bower_components/backbone.marionette/lib/backbone.marionette",
-          "carpenter": "bower_components/marionette.carpenter/dist/marionette.carpenter"
+          "carpenter": "bower_components/marionette.carpenter/dist/marionette.carpenter.require"
         },
         shim: {
           'backbone': {
@@ -52,8 +23,18 @@
           'backbone.radio': {
             deps: ['backbone']
           },
+          'cocktail': {
+            deps: ['underscore'],
+            exports: 'Cocktail'
+          },
           'underscore': {
             exports: '_'
+          },
+          'jquery-resizable-columns': {
+            deps:['jquery']
+          },
+          'undercore.string': {
+            deps:['underscore']
           },
           'marionette': {
             deps: ['backbone', 'backbone.wreqr', 'backbone.babysitter'],
@@ -64,6 +45,8 @@
           }
         }
       });
-    </script>
-  </body>
-</html>
+
+      config(['js/woodworkers-table'],
+      function($) {
+        $(document).foundation();
+      });
