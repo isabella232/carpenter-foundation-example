@@ -23,7 +23,8 @@ module.exports = (grunt) ->
     coffee:
       source:
         options:
-          sourceMap: true
+          sourceMap: false
+          bare: true
         expand: true
         cwd: 'src/'
         src: ['**/**.coffee']
@@ -32,7 +33,7 @@ module.exports = (grunt) ->
 
       spec:
         options:
-          sourceMap: true
+          sourceMap: false
         expand: true
         cwd: 'spec'
         src: ['**/**.coffee']
@@ -50,27 +51,18 @@ module.exports = (grunt) ->
         ext: '.js'
 
     requirejs:
-      source:
+      build:
         options:
           almond: true
           baseUrl: "build/"
           name: "controllers/table_controller"
           include: ["controllers/table_controller"]
-          insertRequire: ["controllers/table_controller"]
           out: "build/marionette.carpenter.js"
           optimize: "none"
           generateSourceMaps: false
-
-      rjs:
-        options:
-          almond: false
-          baseUrl: "build/"
-          name: "controllers/table_controller"
-          include: ["controllers/table_controller"]
-          insertRequire: ["controllers/table_controller"]
-          out: "build/marionette.carpenter.require.js"
-          optimize: "none"
-          generateSourceMaps: false
+          wrap:
+            startFile: 'src/_start.js'
+            endFile: 'src/_end.js'
 
       spec:
         options:
@@ -82,6 +74,7 @@ module.exports = (grunt) ->
             "spec/views/row_spec.js"
             "spec/views/row_list_spec.js"
             "spec/views/paginator_spec.js"
+            "spec/utilities/string_utils_spec.js"
           ]
           out: "build/spec/specs.js"
           optimize: "none"

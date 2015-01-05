@@ -14,9 +14,10 @@ define [
   'views/row'
   'views/row_list'
   'views/selection_indicator'
+  'utilities/string_utils'
 ], (
-    Controller, 
-    CreatePaginatedCollectionClass, 
+    Controller,
+    CreatePaginatedCollectionClass,
     ActionButtonsCollection,
     ActionButton,
     EntityFilter,
@@ -29,7 +30,8 @@ define [
     Paginator,
     Row,
     RowList,
-    SelectionIndicator
+    SelectionIndicator,
+    StringUtils
   ) ->
 
     Marionette.Carpenter = {}
@@ -162,7 +164,7 @@ define [
         # apply column defaults
         _.each @columns, (column) =>
           _.defaults(column, @columnDefaults)
-          _.defaults(column, label: _.str.humanize(column.attribute))
+          _.defaults(column, label: StringUtils.humanize(column.attribute))
 
         # ensure @static is a Boolean
         @static = !!@static
@@ -357,10 +359,3 @@ define [
           $ctrlBarButtons.toggleClass('action-disabled', not enabled)
 
         @paginator.render() if enabled
-
-
-
-    API =
-      # @return [Table.Controller] a new controller for the requested table
-      createTable: (options) ->
-        new Controller options
