@@ -64,6 +64,11 @@
           }
         }
       });
+
+      requirejs(['jquery', 'foundation', 'js/woodworkers-table'],
+        function($) {
+          $(document).foundation();
+      });
     </script>
   </body>
 </html>
